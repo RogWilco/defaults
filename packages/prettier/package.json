@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@rogwilco/defaults-prettier",
+  "version": "0.0.0",
+  "description": "default prettier configurations",
+  "keywords": [
+    "prettier",
+    "defaults"
+  ],
+  "license": "BSD-2-Clause",
+  "author": "Nick Williams <git@nickawilliams.com>",
+  "type": "module",
+  "exports": {
+    "bun": "./src/index.ts",
+    "import": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
+      "import": "./dist/index.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rm -rf node_modules dist",
+    "dist": "tsup",
+    "prepack": "bun dist",
+    "verify": "attw --pack .",
+    "watch": "tsup --watch"
+  },
+  "dependencies": {
+    "prettier-plugin-multiline-arrays": "^4.0.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "prettier-plugin-packagejson": "^2.5.8",
+    "prettier-plugin-sh": "^0.14.0",
+    "prettier-plugin-terraform-formatter": "^1.2.1"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.3",
+    "@types/bun": "^1.2.2",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "prettier": "^3.5.0"
+  },
+  "engines": {
+    "bun": ">=1.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
