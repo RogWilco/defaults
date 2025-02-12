@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@rogwilco/defaults-eslint",
+  "version": "0.0.0",
+  "description": "default eslint configurations",
+  "keywords": [
+    "eslint",
+    "defaults"
+  ],
+  "license": "BSD-2-Clause",
+  "author": "Nick Williams <git@nickawilliams.com>",
+  "type": "module",
+  "exports": {
+    "bun": "./src/index.ts",
+    "import": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
+      "import": "./dist/index.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rm -rf node_modules dist",
+    "dist": "tsup",
+    "prepack": "bun dist",
+    "verify": "attw --pack .",
+    "watch": "tsup --watch"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^10.0.1",
+    "typescript-eslint": "^8.24.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.3",
+    "@types/bun": "^1.2.2",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "eslint": "^9.20.1"
+  },
+  "engines": {
+    "bun": ">=1.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
