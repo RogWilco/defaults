@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@rogwilco/defaults",
+  "version": "0.0.0",
+  "description": "defaults",
+  "keywords": [
+    "defaults"
+  ],
+  "license": "BSD-2-Clause",
+  "author": "Nick Williams <git@nickawilliams.com>",
+  "devDependencies": {
+    "@rogwilco/defaults-eslint": "^0.0.0",
+    "@rogwilco/defaults-prettier": "^0.0.0",
+    "@rogwilco/defaults-typescript": "^0.0.0",
+    "@types/bun": "^1.2.2",
+    "eslint": "^9.20.1",
+    "prettier": "^3.5.0",
+    "typescript": "^5.7.3"
+  }
+}
