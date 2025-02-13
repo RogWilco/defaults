@@ -1,0 +1,20 @@
+/**
+ * Production Configuration
+ *
+ * Recommended options for production environments.
+ */
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Production",
+  "compilerOptions": {
+    "noEmitOnError": true,
+    "removeComments": true,
+    "sourceMap": false,
+  },
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.e2e-test.ts",
+    "**/*.spec.ts",
+    "**/*.e2e-spec.ts",
+  ],
+}

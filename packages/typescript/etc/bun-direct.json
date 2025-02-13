@@ -1,0 +1,16 @@
+/**
+ * Bun: Direct TypeScript Execution Configuration
+ *
+ * A config optimized for direct execution of typescript, omitting settings that
+ * only apply to transpilation or execution of transpiled code.
+ */
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Bun: Direct TypeScript Execution",
+  "extends": "./bun.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+  }
+}

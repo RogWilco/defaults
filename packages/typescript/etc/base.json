@@ -1,0 +1,24 @@
+/**
+ * Base: Recommended Configuration
+ *
+ * Recommended options that work for any environment or tooling.
+ */
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Base: Recommended Configuration",
+  "compilerOptions": {
+    "allowJs": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "jsx": "react-jsx",
+    "noErrorTruncation": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "strict": true,
+  }
+}

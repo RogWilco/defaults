@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@rogwilco/defaults-typescript",
+  "version": "0.0.0",
+  "description": "default typescript configurations",
+  "keywords": [
+    "typescript",
+    "defaults"
+  ],
+  "license": "BSD-2-Clause",
+  "author": "Nick Williams <git@nickawilliams.com>",
+  "exports": {
+    ".": "./etc/base.json",
+    "./*": "./etc/*.json"
+  },
+  "files": ["etc"],
+  "peerDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "bun": ">=1.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

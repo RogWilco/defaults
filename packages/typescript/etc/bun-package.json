@@ -1,0 +1,17 @@
+/**
+ * Bun: NPM Package Configuration
+ *
+ * Extends the base Bun configuration to support building of publishable NPM
+ * packages.
+ */
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Bun: NPM Package",
+  "extends": "./bun.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+  }
+}

@@ -1,0 +1,20 @@
+/**
+ * Bun: Base Configuration
+ *
+ * The recommendede configuration for projects using Bun.
+ */
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Bun: TypeScript Direct Execution",
+  "docs": "https://bun.sh/docs/typescript",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "module": "esnext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "target": "esnext",
+    "types": ["bun"],
+    "verbatimModuleSyntax": true,
+  },
+}

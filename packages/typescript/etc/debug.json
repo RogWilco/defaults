@@ -1,0 +1,19 @@
+/**
+ * Debug Configuratino
+ *
+ * Enables options useful during development and debugging.
+ */
+ {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Debug",
+  "compilerOptions": {
+    "diagnostics": true,
+    "extendedDiagnostics": true,
+    "incremental": true,
+    "inlineSources": true,
+    "jsx": "react-jsxdev",
+    "noEmitOnError": true,
+    "skipLibCheck": false,
+    "sourceMap": true,
+  },
+}
