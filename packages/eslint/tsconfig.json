@@ -1,21 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "allowJs": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "lib": ["esnext"],
-    "module": "esnext",
-    "moduleDetection": "force",
-    "moduleResolution": "bundler",
     "outDir": "dist",
-    "resolveJsonModule": true,
     "rootDir": "src",
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext",
-    "types": ["bun"],
-    "verbatimModuleSyntax": true
   },
-  "include": ["src"],
+  "include": ["src"]
 }
