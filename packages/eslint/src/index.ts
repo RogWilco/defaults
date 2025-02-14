@@ -1,5 +1,4 @@
 import js from '@eslint/js'
-import type { Linter } from 'eslint'
 import prettier from 'eslint-config-prettier'
 import ts from 'typescript-eslint'
 
@@ -48,4 +47,4 @@ export default ts.config(
       '@typescript-eslint/unbound-method': 'off',
     },
   },
-) as Linter.Config
+)
