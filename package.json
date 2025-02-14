@@ -8,6 +8,10 @@
   ],
   "license": "BSD-2-Clause",
   "author": "Nick Williams <git@nickawilliams.com>",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint ."
+  },
   "devDependencies": {
     "@rogwilco/defaults-eslint": "^0.0.0",
     "@rogwilco/defaults-prettier": "^0.0.0",
