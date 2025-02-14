@@ -3,5 +3,8 @@
   "extends": [
     "@rogwilco/defaults-typescript/base",
     "@rogwilco/defaults-typescript/bun-package"
+  ],
+  "exclude": [
+    "**/dist"
   ]
 }
