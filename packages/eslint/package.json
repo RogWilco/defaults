@@ -34,13 +34,13 @@
     "watch": "tsup --watch"
   },
   "dependencies": {
+    "@types/eslint-config-prettier": "^6.11.3",
     "eslint-config-prettier": "^10.0.1",
     "typescript-eslint": "^8.24.0"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.3",
     "@types/bun": "^1.2.2",
-    "@types/eslint-config-prettier": "^6.11.3",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   },
