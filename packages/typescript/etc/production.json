@@ -9,12 +9,12 @@
   "compilerOptions": {
     "noEmitOnError": true,
     "removeComments": true,
-    "sourceMap": false,
+    "sourceMap": false
   },
   "exclude": [
     "**/*.test.ts",
     "**/*.e2e-test.ts",
     "**/*.spec.ts",
-    "**/*.e2e-spec.ts",
-  ],
+    "**/*.e2e-spec.ts"
+  ]
 }

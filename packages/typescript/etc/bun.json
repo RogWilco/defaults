@@ -15,6 +15,6 @@
     "moduleResolution": "bundler",
     "target": "esnext",
     "types": ["bun"],
-    "verbatimModuleSyntax": true,
-  },
+    "verbatimModuleSyntax": true
+  }
 }

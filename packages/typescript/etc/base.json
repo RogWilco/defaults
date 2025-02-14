@@ -19,6 +19,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
-    "strict": true,
+    "strict": true
   }
 }
