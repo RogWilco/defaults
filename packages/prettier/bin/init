@@ -5,13 +5,7 @@ import { resolve } from 'path'
 
 const toolName = 'Prettier'
 const configFile = resolve(process.cwd(), '.prettierrc')
-const configTemplate =
-  `
-{
-  "$schema": "https://json.schemastore.org/prettierrc",
-  "extends": "@rogwilco/defaults-prettier"
-}
-`.trim() + '\n'
+const configTemplate = '"@rogwilco/defaults-prettier"' + '\n'
 
 if (!existsSync(configFile)) {
   console.log(`Initializing...`)
