@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+import { existsSync, writeFileSync } from 'fs'
+import { resolve } from 'path'
+
+const toolName = 'Typescript'
+const configFile = resolve(process.cwd(), 'tsconfig.json')
+const configTemplate =
+  `
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@rogwilco/defaults-typescript/base"
+}
+`.trim() + '\n'
+
+if (!existsSync(configFile)) {
+  console.log(`Initializing...`)
+  writeFileSync(configFile, configTemplate)
+  console.log(`${toolName} config created:\n\t${configFile}`)
+} else {
+  console.log(`${toolName} config already exists:\n\t${configFile}`)
+}
