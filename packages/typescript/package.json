@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@rogwilco/defaults-typescript",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "default typescript configurations",
   "keywords": [
     "typescript",
@@ -9,6 +9,7 @@
   ],
   "license": "BSD-2-Clause",
   "author": "Nick Williams <git@nickawilliams.com>",
+  "type": "module",
   "exports": {
     ".": "./etc/base.json",
     "./*": "./etc/*.json"
