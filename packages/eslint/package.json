@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@rogwilco/defaults-eslint",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "default eslint configurations",
   "keywords": [
     "eslint",
@@ -22,7 +22,11 @@
     }
   },
   "types": "./dist/index.d.ts",
+  "bin": {
+    "init-defaults-eslint": "./bin/init"
+  },
   "files": [
+    "bin",
     "dist",
     "src"
   ],

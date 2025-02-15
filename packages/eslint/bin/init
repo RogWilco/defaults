@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+import { existsSync, writeFileSync } from 'fs'
+import { resolve } from 'path'
+
+const toolName = 'Eslint'
+const configFile = resolve(process.cwd(), 'eslint.config.ts')
+const configTemplate =
+  `
+import config from '@rogwilco/defaults-eslint'
+import type { Linter } from 'eslint'
+
+export default [
+  ...config,
+] satisfies Linter.Config[]
+`.trim() + '\n'
+
+if (!existsSync(configFile)) {
+  console.log(`Initializing...`)
+  writeFileSync(configFile, configTemplate)
+  console.log(`${toolName} config created:\n\t${configFile}`)
+} else {
+  console.log(`${toolName} config already exists:\n\t${configFile}`)
+}
