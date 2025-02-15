@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+import { existsSync, writeFileSync } from 'fs'
+import { resolve } from 'path'
+
+const toolName = 'Prettier'
+const configFile = resolve(process.cwd(), '.prettierrc')
+const configTemplate =
+  `
+{
+  "extends": "@rogwilco/defaults-prettier"
+}
+`.trim() + '\n'
+
+if (!existsSync(configFile)) {
+  console.log(`Initializing...`)
+  writeFileSync(configFile, configTemplate)
+  console.log(`${toolName} config created:\n\t${configFile}`)
+} else {
+  console.log(`${toolName} config already exists:\n\t${configFile}`)
+}
