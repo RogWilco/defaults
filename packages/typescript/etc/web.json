@@ -1,0 +1,28 @@
+/**
+ * Web Configuration
+ *
+ * A config optimized for transpilation targeting a browser environment.
+ */
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "display": "Web",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "esnext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "noUncheckedSideEffectImports": true,
+    "skipLibCheck": true,
+    "target": "es2020",
+    "useDefineForClassFields": true
+  }
+}

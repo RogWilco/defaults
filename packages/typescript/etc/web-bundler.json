@@ -1,0 +1,13 @@
+/**
+ * Web: Bundler Configuration
+ *
+ * A config optimized for bundlers targeting a browser environment.
+ */
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./web.json",
+  "display": "Web: Bundler",
+  "compilerOptions": {
+    "noEmit": true
+  }
+}
