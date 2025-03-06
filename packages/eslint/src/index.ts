@@ -30,6 +30,13 @@ export default ts.config(
           ignoreProperties: true,
         },
       ],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
       '@typescript-eslint/no-useless-constructor': 'error',
       '@typescript-eslint/return-await': 'error',
       'eol-last': ['error', 'always'],
