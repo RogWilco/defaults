@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@rogwilco/defaults-vscode",
+  "version": "0.1.0-rc.1",
+  "description": "Collect them all",
+  "repository": "github:rogwilco/defaults/packages/vscode",
+  "license": "BSD-2-Clause",
+  "author": "Nick Williams <git@nickawilliams.com>",
+  "scripts": {
+    "generate": "bun bin/generate.ts"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/ejs": "^3.1.5",
+    "bun": "^1.2.8",
+    "canvas": "^3.1.0",
+    "ejs": "^3.1.10",
+    "sharp": "^0.33.5",
+    "vsce": "^2.15.0"
+  }
+}

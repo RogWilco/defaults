@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "<%= package.name %>",
+  "displayName": "<%= package.displayName %>",
+  "version": "<%= package.version %>",
+<% if (package.description) { -%>
+  "description": "<%= package.description %>",
+<% } -%>
+<% if (package.categories) { -%>
+  "categories": <%= JSON.stringify(package.categories, null, 4) %>,
+<% } -%>
+<% if (package.keywords) { -%>
+  "keywords": <%= JSON.stringify(package.keywords, null, 4) %>,
+<% } -%>
+  "repository": "github:rogwilco/defaults/packages/vscode",
+  "license": "BSD-2-Clause",
+  "author": "Nick Williams <git@nickawilliams.com>",
+  "publisher": "rogwilco",
+  "extensionPack": <%= JSON.stringify(extensions, null, 4) %>,
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "icon": "icon.png"
+<% if (package.galleryBanner) { -%>,
+  "galleryBanner": <%= JSON.stringify(package.galleryBanner, null, 4) %>
+<% } -%>
+}
