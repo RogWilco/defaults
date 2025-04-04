@@ -9,23 +9,17 @@ clean:
 		node_modules \
 		var
 
-build/%: node_modules
-	$(eval PACK_NAME := $(subst *,,$*))
-	$(eval DIR_CONFIG := $(ROOT_CONFIG)/$(PACK_NAME))
-	$(eval DIR_INPUT := $(ROOT_INPUT))
-	$(eval DIR_OUTPUT := $(ROOT_BUILD)/$(PACK_NAME))
+validate/%:
+	@ bin/validate.sh "$(ROOT_CONFIG)/$(subst *,,$*)"
 
-	@bin/generate.ts "$(DIR_CONFIG)" "$(DIR_INPUT)" "$(DIR_OUTPUT)"
+build/%: node_modules validate/%
+	@ bin/generate.ts "$(ROOT_CONFIG)/$(subst *,,$*)" "$(ROOT_INPUT)" "$(ROOT_BUILD)/$(subst *,,$*)"
 
 dist/%: build/%
-	$(eval PACK_NAME := $(subst *,,$*))
-	$(eval DIR_BUILD := $(ROOT_BUILD)/$(PACK_NAME))
-	$(eval DIR_DIST := $(ROOT_DIST))
-
-	@ cd "$(DIR_BUILD)" && \
+	@ cd "$(ROOT_BUILD)/$(subst *,,$*)" && \
 		vsce package && \
-		mkdir -p "$(DIR_DIST)" && \
-		mv *.vsix "$(DIR_DIST)/"
+		mkdir -p "$(ROOT_DIST)" && \
+		mv *.vsix "$(ROOT_DIST)/"
 
 .PHONY: clean build/% dist/%
 

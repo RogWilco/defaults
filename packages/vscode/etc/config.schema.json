@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "package",
+    "icon",
+    "extensions"
+  ],
+  "properties": {
+    "package": {
+      "type": "object",
+      "description": "Package configuration",
+      "required": [
+        "name",
+        "version",
+        "displayName"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Package name",
+          "pattern": "^[a-z0-9]+"
+        },
+        "version": {
+          "type": "string",
+          "description": "Package version in semver format",
+          "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
+        },
+        "categories": {
+          "type": "array",
+          "description": "Package categories",
+          "items": {
+            "type": "string"
+          }
+        },
+        "keywords": {
+          "type": "array",
+          "description": "Package keywords",
+          "items": {
+            "type": "string"
+          }
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Package display name"
+        }
+      }
+    },
+    "icon": {
+      "type": "object",
+      "description": "Icon configuration",
+      "required": [
+        "background"
+      ],
+      "properties": {
+        "background": {
+          "type": "array",
+          "description": "Background colors for the icon",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]+$"
+          }
+        }
+      }
+    },
+    "extensions": {
+      "type": "array",
+      "description": "List of extensions",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9\\-]+\\.[a-z0-9\\-]+$"
+      }
+    }
+  }
+}
