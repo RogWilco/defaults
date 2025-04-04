@@ -4,7 +4,7 @@
     "name": "defaults-vscode-markdown",
     "version": "0.1.0",
     "displayName": "Defaults: Markdown",
-    "description": "Recommended extensions for Markdown editing in Visual Studio Code, especially for markdown that will be rendered by GitHub.",
+    "description": "Recommended extensions for Markdown editing, especially for markdown that will be rendered by GitHub.",
     "categories": [
       "Extension Packs"
     ],

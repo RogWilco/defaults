@@ -1,0 +1,24 @@
+{
+  "$schema": "../../config.schema.json",
+  "package": {
+    "name": "defaults-vscode-golang",
+    "version": "0.1.0",
+    "displayName": "Defaults: Go",
+    "description": "Recommended extensions for Go development.",
+    "categories": [
+      "Extension Packs"
+    ],
+    "keywords": [
+      "go"
+    ]
+  },
+  "icon": {
+    "background": [
+      "#5DC9E2",
+      "#00ADD8"
+    ]
+  },
+  "extensions": [
+    "golang.go"
+  ]
+}

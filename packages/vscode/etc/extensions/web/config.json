@@ -1,0 +1,30 @@
+{
+  "$schema": "../../config.schema.json",
+  "package": {
+    "name": "defaults-vscode-web",
+    "version": "0.1.0",
+    "displayName": "Defaults: Web",
+    "description": "Recommended extensions for web development.",
+    "categories": [
+      "Extension Packs"
+    ],
+    "keywords": [
+      "web",
+      "html",
+      "css"
+    ]
+  },
+  "icon": {
+    "background": [
+      "#3F51B5",
+      "#E91E63"
+    ]
+  },
+  "extensions": [
+    "bierner.color-info",
+    "coyote-studios.monkey-wrench",
+    "csstools.postcss",
+    "ecmel.vscode-html-css",
+    "vunguyentuan.vscode-css-variables"
+  ]
+}

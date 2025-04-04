@@ -1,0 +1,29 @@
+{
+  "$schema": "../../config.schema.json",
+  "package": {
+    "name": "defaults-vscode-python",
+    "version": "0.1.0",
+    "displayName": "Defaults: Python",
+    "description": "Recommended extensions for Python development.",
+    "categories": [
+      "Extension Packs"
+    ],
+    "keywords": [
+      "python"
+    ]
+  },
+  "icon": {
+    "background": [
+      "#4584B6",
+      "#093B61"
+    ]
+  },
+  "extensions": [
+    "codeium.windsurfpyright",
+    "ms-python.black-formatter",
+    "ms-python.debugpy",
+    "ms-python.isort",
+    "ms-python.python",
+    "samuelcolvin.jinjahtml"
+  ]
+}

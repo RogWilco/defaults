@@ -1,0 +1,31 @@
+{
+  "package": {
+    "name": "defaults-vscode",
+    "version": "0.1.0",
+    "displayName": "Defaults: All The Things",
+    "description": "Collect them all",
+    "categories": [
+      "Extension Packs"
+    ],
+    "keywords": [
+      "all"
+    ]
+  },
+  "icon": {
+    "background": [
+      "#F44336",
+      "#00BCD4"
+    ]
+  },
+  "extensions": [
+    "rogwilco.defaults-vscode-general",
+    "rogwilco.defaults-vscode-golang",
+    "rogwilco.defaults-vscode-markdown",
+    "rogwilco.defaults-vscode-others",
+    "rogwilco.defaults-vscode-python",
+    "rogwilco.defaults-vscode-shell",
+    "rogwilco.defaults-vscode-themes",
+    "rogwilco.defaults-vscode-typescript",
+    "rogwilco.defaults-vscode-web"
+  ]
+}

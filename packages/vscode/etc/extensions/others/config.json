@@ -1,0 +1,35 @@
+{
+  "$schema": "../../config.schema.json",
+  "package": {
+    "name": "defaults-vscode-others",
+    "version": "0.1.0",
+    "displayName": "Defaults: Others",
+    "description": "Recommended extensions for other languages.",
+    "categories": [
+      "Extension Packs"
+    ],
+    "keywords": [
+      "others"
+    ]
+  },
+  "icon": {
+    "background": [
+      "#F44336",
+      "#FFC107"
+    ]
+  },
+  "extensions": [
+    "42crunch.vscode-openapi",
+    "davidnussio.vscode-jq-playground",
+    "fredwangwang.vscode-hcl-format",
+    "hashicorp.hcl",
+    "hashicorp.terraform",
+    "jq-syntax-highlighting.jq-syntax-highlighting",
+    "ms-vscode.makefile-tools",
+    "pascalreitermann93.vscode-yaml-sort",
+    "redhat.vscode-yaml",
+    "shopify.ruby-lsp",
+    "tamasfe.even-better-toml",
+    "ziglang.vscode-zig"
+  ]
+}

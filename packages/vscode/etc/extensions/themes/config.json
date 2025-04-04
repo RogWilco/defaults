@@ -1,0 +1,37 @@
+{
+  "$schema": "../../config.schema.json",
+  "package": {
+    "name": "defaults-vscode-themes",
+    "version": "0.1.0",
+    "displayName": "Defaults: Themes",
+    "description": "Recommended themes and other UI related extensions.",
+    "categories": [
+      "Extension Packs"
+    ],
+    "keywords": [
+      "themes"
+    ]
+  },
+  "icon": {
+    "background": [
+      "#4CAF50",
+      "#2196F3"
+    ]
+  },
+  "extensions": [
+    "brittanychiang.halcyon-vscode",
+    "codereviewer14.cyber77-vscode",
+    "dracula-theme.theme-dracula",
+    "eliverlara.andromeda",
+    "equinusocio.vsc-material-theme-icons",
+    "equinusocio.vsc-material-theme",
+    "lehni.vscode-fix-checksums",
+    "noahraskin.electronic-dawn-theme",
+    "pkief.material-icon-theme",
+    "robbowen.synthwave-vscode",
+    "samrapdev.outrun",
+    "teabyii.ayu",
+    "thertzlor.semantic-rainbow",
+    "wesbos.theme-cobalt2"
+  ]
+}
