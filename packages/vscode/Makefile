@@ -25,7 +25,7 @@ validate/%:
 build:
 	@ for extension in $(wildcard $(ROOT_CONFIG)/*); do \
 		extname=$$(basename $$extension); \
-		$$(MAKE) build/$$extname; \
+		$(MAKE) build/$$extname; \
 	done
 
 ## Build a specific extension
@@ -49,13 +49,13 @@ dist/%: build/%
 publish:
 	@ for extension in $(wildcard $(ROOT_CONFIG)/*); do \
 		extname=$$(basename $$extension); \
-		$$(MAKE) publish/$$extname; \
+		$(MAKE) publish/$$extname; \
 	done
 
 ## Publish a specific extension
 publish/%: dist/%
 	@ cd "$(ROOT_DIST)" && \
-		vsce publish --packagePath "$(subst *,,$*)"
+		vsce publish --packagePath defaults-vscode-$(subst *,,$*)-*.vsix
 
 .PHONY: clean validate validate/% build/% dist/% publish/% publish
 
