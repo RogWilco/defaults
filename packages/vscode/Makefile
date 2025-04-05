@@ -45,7 +45,19 @@ dist/%: build/%
 		mkdir -p "$(ROOT_DIST)" && \
 		mv *.vsix "$(ROOT_DIST)/"
 
-.PHONY: clean validate validate/% build/% dist/%
+## Publish all extensions
+publish:
+	@ for extension in $(wildcard $(ROOT_CONFIG)/*); do \
+		extname=$$(basename $$extension); \
+		$$(MAKE) publish/$$extname; \
+	done
+
+## Publish a specific extension
+publish/%: dist/%
+	@ cd "$(ROOT_DIST)" && \
+		vsce publish --packagePath "$(subst *,,$*)"
+
+.PHONY: clean validate validate/% build/% dist/% publish/% publish
 
 node_modules:
 	@ bun install
