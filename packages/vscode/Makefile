@@ -55,7 +55,11 @@ publish:
 ## Publish a specific extension
 publish/%: dist/%
 	@ cd "$(ROOT_DIST)" && \
-		vsce publish --packagePath defaults-vscode-$(subst *,,$*)-*.vsix
+		if [ "$*" = "_all" ]; then \
+			vsce publish --packagePath defaults-vscode-*.vsix; \
+		else \
+			vsce publish --packagePath defaults-vscode-$(subst *,,$*)-*.vsix; \
+		fi
 
 .PHONY: clean validate validate/% build/% dist/% publish/% publish
 
